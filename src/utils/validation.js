@@ -18,4 +18,12 @@ const validatelogin = (data) => {
 
   return schema.validate(data);
 };
-module.exports = { validateRegistration, validatelogin };
+
+const validateEmailChange = (data) => {
+  const schema = Joi.object({
+    newEmail: Joi.string().email().required(),
+  });
+  return schema.validate(data);
+};
+
+module.exports = { validateRegistration, validatelogin, validateEmailChange };
