@@ -7,6 +7,8 @@ const authRoutes = require("./routes/auth-route");
 const settingsRoutes = require("./routes/setting-route");
 const TagRoutes = require("./routes/tag-route");
 const ProjectRoutes = require("./routes/projects");
+const TeamsRoutes = require("./routes/teams");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -24,6 +26,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/tags", TagRoutes);
 app.use("/api/projects", ProjectRoutes);
+app.use("/api/team", TeamsRoutes);
+
 
 app.listen(PORT, () => {
   logger.info(`Server is running on port ${PORT}`);

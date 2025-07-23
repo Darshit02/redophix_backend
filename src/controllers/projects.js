@@ -5,7 +5,7 @@ const createProject = async (req, res) => {
   logger.info("Project create endpoint hit");
 
   try {
-    const { name, description, caseStudy, liveLink } = req.body;
+    const { name, description, caseStudy, liveLink } = req.body || {};
 
     // Parse JSON stringified fields
     let tags = [];
