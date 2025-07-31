@@ -8,6 +8,8 @@ const settingsRoutes = require("./routes/setting-route");
 const TagRoutes = require("./routes/tag-route");
 const ProjectRoutes = require("./routes/projects");
 const TeamsRoutes = require("./routes/teams");
+const InquiryRoute = require("./routes/inquiry-route");
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,6 +29,8 @@ app.use("/api/settings", settingsRoutes);
 app.use("/api/tags", TagRoutes);
 app.use("/api/projects", ProjectRoutes);
 app.use("/api/team", TeamsRoutes);
+app.use("/api/inquiry", InquiryRoute);
+
 
 
 app.listen(PORT, () => {
